@@ -13,8 +13,9 @@ async function main() {
 
   // verify contract
 
-  console.log(network.config)
+  // console.log(network.config)
   if (network.config.chainId === 11155111 && process.env.ETHERSCAN_APIKEY) {
+    console.log("waiting for 6 block confirmations...")
     await simpleStorage.deployTransaction.wait(6)
     await verifyContract(simpleStorage.address, [])
   }

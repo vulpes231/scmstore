@@ -6,6 +6,7 @@ require("hardhat-gas-reporter");
 require("hardhat-contract-sizer");
 require("dotenv").config();
 require("solhint");
+require("./tasks/block-number")
 
 const SEPOLIA_RPC_URL = process.env.SEPOLIA_RPC_URL
 const WALLET_PK = process.env.PRIVATE_KEY
